@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicias Dulces - Pastelería</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffaf0;
+        }
+		.container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 40%;
+            margin: 30px auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .text {
+            width: 20%;
+            padding: 20px;
+        }
+        .image {
+            width: 50%;
+            text-align: left;
+        }
+        .image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .postre-destacado {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background: #ffe6b3;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .postre-destacado .image {
+            flex: 1;
+            text-align: left;
+        }
+        .postre-destacado .image img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .postre-destacado .descripcion {
+            flex: 2;
+            padding: 20px;
+            text-align: left;
+        }
+        .h2 text-align{
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .text {
+            width: 50%;
+            padding: 20px;
+        }
+        .image {
+            text-align: right;
+			width: 300px; /* Ancho fijo */
+			height: auto; /* Altura ajustable */
+			border-radius: 10px;
+
+        }
+        .image img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #ff6f61, #ffcc33);
+            color: white;
+            padding: 5px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header img {
+            height: 150px; /* Tamaño de la imagen */
+            margin-right: 5px;
+            border-radius: 50%; /* Hace que la imagen sea redonda */
+        }
+        nav {
+            background-color: #ffccff;
+            display: flex;
+            justify-content: center;
+            padding:20px 0;
+            position: sticky;
+            top: 20px;
+            z-index: 999;
+        }
+        nav a {
+            margin: 5px;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            display: none; /* Ocultamos todas las secciones por defecto */
+            padding: 10px;
+            text-align: center;
+            min-height: 100vh;
+        }
+        .section.active {
+            display: block; /* Mostramos la sección activa */
+        }
+        .section:nth-child(odd) {
+            background-color: #ffe6b3;
+        }
+        .section:nth-child(even) {
+            background-color: #fff3e0;
+        }
+        footer {
+            background-color: #ff6f61;
+            color: black;
+            text-align: center;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .menu-item {
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+		.map {
+            height: 500px;
+            width: 100%;
+        }
+      </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <img src="https://utmachalaeduec-my.sharepoint.com/:i:/r/personal/atituana1_utmachala_edu_ec/Documents/7mo%20PAO/TITULACI%C3%93N/possssstresss/LOGOPOSTRES.jpg?csf=1&web=1&e=p1DMZU" alt="Logo del Local">
+        		<h1>DELICIAS DULCES</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#inicio" onclick="mostrarSeccion('inicio')">INICIO</a>
+        <a href="#sobre-nosotros" onclick="mostrarSeccion('sobre-nosotros')">SOBRE NOSOTROS</a>
+        <a href="#menu" onclick="mostrarSeccion('menu')">MENÚ</a>
+        <a href="#galeria" onclick="mostrarSeccion('POSTRE DESTACADO')">PERSONALIZACIONES</a>
+        <a href="#testimonios" onclick="mostrarSeccion('promociones')">PROMOCIONES</a>
+        <a href="#contacto" onclick="mostrarSeccion('contacto')">CONTACTO</a>
+    </nav>
+
+    <!-- Secciones -->
+    <div id="inicio" class="section active">
+		<body>
+    <div class="container">
+        <div class="text">
+            <h1>Delicias Dulces</h1>
+            <p>"DELlCIAS DULCES", donde cada postre es una obra de arte y cada bocado una experiencia inolvidable. Creemos que lo dulce hace la vida más feliz, con pasión, calidad y amor en cada creación. Déjate conquistar por nuestros sabores únicos y haz de cada momento una dulce celebración." 🍰❤️</p>
+        </div>
+        <div class="image">
+            <img src="https://i.pinimg.com/736x/01/ff/36/01ff36ca228c002f13cc210256a3a116.jpg"alt="Postres Delicias Dulces">
+        </div>
+    </div>
+	</div>
+</body>
+    <div id="sobre-nosotros" class="section">
+    <div class="container">
+        <div class="text">
+            <h1>Sobre Nosotros</h1>
+            <p>Somos Adriana y Narcisa, dos amigas apasionadas por la repostería. Lo que comenzó como un hobby, preparando dulces para familia y amigos, pronto se convirtió en un emprendimiento.
+            La creciente demanda nos motivó a crear esta página web, un espacio donde compartimos nuestras creaciones y llevamos alegría a cada celebración. En DELICIAS DULCES, cada postre es elaborado con dedicación, ingredientes de calidad y un toque especial.
+
+            Gracias por confiar en nosotras para endulzar tus momentos más especiales. 💕🍰</p>
+        </div>
+        <div class="image">
+            <img src="https://utmachalaeduec-my.sharepoint.com/:i:/r/personal/atituana1_utmachala_edu_ec/Documents/7mo%20PAO/TITULACI%C3%93N/possssstresss/IMG-20131201-00041.jpg?csf=1&web=1&e=abrfve"alt="Postres Delicias Dulces">
+        </div>
+    </div>
+    </div>
+	
+	
+    <div id="menu" class="section">
+        <h2>Menú</h2>
+        <div class="menu-item">
+            <img src="https://www.nestleprofessional-latam.com/sites/default/files/styles/np_recipe_detail/public/2024-08/torta-barras-chocolate-black-white-sublime.jpg?itok=BXcporU-" alt="Tarta de Chocolate">
+            <h3>Tarta de Chocolate</h3>
+            <p>$12.00</p>
+        </div>
+        <div class="menu-item">
+            <img src="C:\Users\abgad\OneDrive - utmachala.edu.ec\Escritorio\IMgeeeeeeweb\OneDrive_1_6-2-2025\Vainilla.jpg" alt="Cupcakes de Vainilla">
+            <h3>Cupcakes de Vainilla</h3>
+            <p>$8.00</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/65/45/ab/6545abf014cedd2a7207fa524dbf1e27.jpg" alt="Macarons">
+            <h3>Flan de Coco</h3>
+            <p>$10.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/e8/12/72/e81272ce3d2046dc20600da0add3848a.jpg" alt="Macarons">
+            <h3>Flan de manjar</h3>
+            <p>$1.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="C:\Users\abgad\Downloads\Mosaico $1.jpg" alt="Macarons">
+            <h3>Mosaico</h3>
+            <p>$1.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="C:\Users\abgad\Downloads\Alfajores.jpg" alt="Macarons">
+            <h3>Alfajores</h3>
+            <p>$6.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="C:\Users\abgad\Downloads\Galletas.jpg"" alt="Macarons">
+            <h3>Galletas</h3>
+            <p>$15.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+		
+		
+    </div>
+	
+     <div id="POSTRE DESTACADO" class="section">
+        <h2>POSTRES & PASTELES</h2>
+        <div class="postre-destacado">
+            <div class="image">
+                <img src="https://i.pinimg.com/736x/40/fa/54/40fa5417022d2f70365991ee19b43486.jpg" alt="Torta de Fútbol">
+            </div>
+            <div class="descripcion">
+                <h3>🎂⚽ Torta Campeón de Fútbol ⚽🎂</h3>
+				<p> ✨ Ingredientes y detalles:</p>
+				<p>🔹 Base: Delicioso bizcocho esponjoso de vainilla o chocolate (a elección) con relleno cremoso de dulce de leche o ganache de chocolate. </p>
+				<p>🔹 Cobertura: Suave fondant verde simulando el césped y detalles en crema de mantequilla con efecto de césped natural.</p>
+				<p>🔹 Decoración: Porterías en miniatura, líneas del campo en glaseado blanco, figuras de jugadores comestibles y balones de azúcar en los bordes.</p>
+				<p>🔹 Toques finales: Flores en crema para un acabado elegante y un efecto de dripping en tonos verdes para mayor realismo.</p>
+				<p> </p>
+				</div>
+        </div>
+		<div class="postre-destacado">
+            <div class="image">
+                <img src="https://i.pinimg.com/736x/56/36/cc/5636cc20e5c06af50c083fefc358c3d4.jpg" alt="Torta de Fútbol">
+            </div>
+            <div class="descripcion">
+                <h3>🎂✨ Torta Elegancia Rosa ✨🎂</h3>
+				<p> 🌸 Ingredientes y detalles:</p>
+                <p> 🔹 Base: Suave y esponjoso bizcocho de vainilla, red velvet o chocolate (a elección) con un relleno irresistible de crema de fresas, chocolate blanco o dulce de leche</p>
+				<p> 🔹 Cobertura: Delicada crema de mantequilla en tonos pastel rosa con un sutil efecto de ondas para un acabado sofisticado.</p>
+				<p> 🔹 Decoración: Ilustración comestible de una elegante dama con un vestido de flores en relieve, mariposas de azúcar en tonos lilas y perlas doradas para un toque de glamour.</p>
+				<p> 🔹 Toques finales: Esferas doradas de chocolate, topper floral con mensaje personalizado y una base dorada para resaltar su elegancia.</p>
+            </div>
+		</div>
+		
+        <div class="postre-destacado">
+            <div class="image">
+                <img src="https://i.pinimg.com/736x/56/36/cc/5636cc20e5c06af50c083fefc358c3d4.jpg" alt="Torta de Fútbol">
+            </div>
+            <div class="descripcion">
+                <h3>🎂✨ Torta Elegancia Rosa ✨🎂</h3>
+				<p> 🌸 Ingredientes y detalles:</p>
+                <p> 🔹 Base: Suave y esponjoso bizcocho de vainilla, red velvet o chocolate (a elección) con un relleno irresistible de crema de fresas, chocolate blanco o dulce de leche</p>
+				<p> 🔹 Cobertura: Delicada crema de mantequilla en tonos pastel rosa con un sutil efecto de ondas para un acabado sofisticado.</p>
+				<p> 🔹 Decoración: Ilustración comestible de una elegante dama con un vestido de flores en relieve, mariposas de azúcar en tonos lilas y perlas doradas para un toque de glamour.</p>
+				<p> 🔹 Toques finales: Esferas doradas de chocolate, topper floral con mensaje personalizado y una base dorada para resaltar su elegancia.</p>
+            </div>
+        </div>
+    </div>
+        
+
+    <div id="prom" class="section">
+        <h2>🥰🥳💥✨SAN VIERNES💥✨🥳🥰</h2>
+		<div class="descripcion">
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+        </div>
+		
+		<div class="descripcion">
+		<div class="menu-item">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+			<img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons">
+			<img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons" width="10" height="auto">
+            <img src="https://i.pinimg.com/736x/f2/03/70/f20370c377cc7a7b17943f67307c833f.jpg" alt="Macarons" class="imagen-pequena">
+
+            <h3>Cheesecake de Fresa</h3>
+            <p>$15.00</p>
+        </div>
+        </div>
+    </div>
+
+    <div id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>Email: contacto@deliciasdulces.com</p>
+        <p>Teléfono: +1 (234) 567-890</p>
+        <p>Dirección: Calle Dulce, 123, Ciudad Pastel</p>
+		<a href="https://maps.app.goo.gl/o9AAsVuqXx3ThP2y9" target="_blank">
+    Ver ubicación en Google Maps
+</a>
+	</div>
+		 		 	    }   <!-- Pie de página -->
+    <footer>
+        <p>© 2025 DELICIAS DULCES. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para mostrar la sección seleccionada
+        function mostrarSeccion(id) {
+            // Ocultar todas las secciones
+            const secciones = document.querySelectorAll('.section');
+            secciones.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Mostrar la sección activa
+            const seccionActiva = document.getElementById(id);
+            seccionActiva.classList.add('active');
+        }
+    </script>
+</body>
+</html>
